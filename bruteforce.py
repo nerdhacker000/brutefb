@@ -1,3 +1,5 @@
+#Tool is free for use
+import os
 import time
 import sys
 
