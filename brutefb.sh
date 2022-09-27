@@ -1,4 +1,4 @@
-#!bin/bash
+#!/usr/bin/env
 
 clear
 export PS1="\e[0;32m[github.com/nerdhacker000]\$ \e[0m"
