@@ -21,4 +21,3 @@ if [[ $length -eq 1 ]]
 python brutefb6.py
 then
 fi
-
