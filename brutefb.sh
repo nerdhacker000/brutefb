@@ -18,8 +18,7 @@ echo "Choose password length:"
 read length
 echo "Initializing..."
 if [[ $length -eq 1 ]]
-then
-  echo "Starting 6-character password attack..."
-fi
 python brutefb6.py
+then
+fi
 exit
