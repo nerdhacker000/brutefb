@@ -7,16 +7,13 @@ echo " |   |___)|___)|   \|___|   |  |___"
 echo " github:https:github.com/nerdhacker000/"
 echo "More tutorials on my website: https://nerdhaka.blogspot.com"
 echo "developer: Nerd Haka
-echo "Choose password lenght:"
 echo "[1] 6-character password"
 echo "[2] 7-character password"
-read lenght
+echo "Choose password length:"
+read length
 echo "Initializing..."
-if [[$length - eq 1]] 
+if [[ $length -eq 1 ]]
 then
-./brutefb6.sh
-else if[[#]]
-then
-./brutefb7.sh
+  echo "Starting 6-character password attack..."
 fi
 python3 brutefb6.py
