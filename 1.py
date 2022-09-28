@@ -1,54 +1,8 @@
-import sys
-from selenium import webdriver 
-
-from time import sleep 
-
-from webdriver_manager.chrome import ChromeDriverManager 
-
-from selenium.webdriver.chrome.options import Options  
-
-  
-
-usr=input('Enter Email Id:')  
-
-pwd=input('Enter Password:')  
-
-  
-
-driver = webdriver.Chrome(ChromeDriverManager().install()) 
-
-driver.get('https://www.facebook.com/') 
-
-print ("Opened facebook") 
-
-sleep(1) 
-
-  
-
-username_box = driver.find_element_by_id('email') 
-username_box.send_keys(usr) 
-
-print ("Email Id entered") 
-
-sleep(1) 
-
-  
-
-password_box = driver.find_element_by_id('pass') 
-password_box.send_keys(pwd) 
-
-print ("Password entered") 
-
-  
-
-login_box = driver.find_element_by_id('loginbutton') 
-login_box.click() 
-
-  
-
-print ("Done") 
-
-input('Press anything to quit') 
-driver.quit() 
-
-print("Finished")
+import mechanize
+br = mechanize.Browser()
+br.open("http://mywebsite.com/messages.php?action=send")
+br.select_form(nr = 0)
+br.form['email'] = 'marccarthy3@gmail.com'
+br.form['pass'] = '. 1234@ duah. com'
+req = br.submit()
+req.read()
