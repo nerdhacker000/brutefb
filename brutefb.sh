@@ -1,4 +1,5 @@
 #!/bin/bash
+pip3 install requests_html bs4
 clear
 export PS1="\e[0;32m[nerdhacker000]\? \e[0m"
 echo "	   FOR EDUCATIONAL PURPOSES "
