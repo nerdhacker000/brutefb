@@ -14,7 +14,7 @@ echo "	Tool developer: Nerd Haka"
 echo
 echo "	[1] 6 to 7 character password"
 echo "	[2] 8 to 10 character password"
-echo " - - - - - - - - - - - - - - - - - - 
+echo " - - - - - - - - - - - - - - - - - -" 
 echo "	Choose password character length to attack:"
 echo
 read length
