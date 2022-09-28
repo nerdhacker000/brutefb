@@ -8,7 +8,7 @@ def try_password():
     payload = {ID_USERNAME : email, ID_PASSWORD : password}
 
     resp = requests.get(FB_URL)
-    print "Response to GET request: %s" %resp.content
+    print("Response to GET request: %s" %resp.content)
 
     resp = requests.post(SIGNUP_URL, payload)
     print "Found password"
